@@ -144,6 +144,13 @@ public class ServerCommands extends BaseComponentSystem {
 
         throw new IllegalArgumentException("No such user with ID " + userId);
     }
+    
+    @Command(shortDescription = "Ban user by client ID", runOnServer = true,
+        requiredPermission = PermissionManager.USER_MANAGEMENT_PERMISSION)
+public String banUserByID(@CommandParam("clientID") String clientID) {
+    
+    throw new IllegalArgumentException("No such user with ID " + clientID);
+}
 
     @Command(shortDescription = "List users",
             requiredPermission = PermissionManager.USER_MANAGEMENT_PERMISSION)
